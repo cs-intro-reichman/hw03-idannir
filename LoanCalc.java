@@ -69,8 +69,6 @@ public class LoanCalc {
           		  H = g;
        		 g = (L + H) / 2;
        		iterationCounter++;
-    			  
-			//System.out.println(H);
 		}
 		
    		return  g;

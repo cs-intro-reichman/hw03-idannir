@@ -10,8 +10,19 @@ public class UniqueChars {
      * except that all the duplicate characters are removed,
      * unless they are space characters.
      */
-    public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
-    }
+    public static String uniqueChars(String str) {
+        String str1 = "";
+        for (int i =0;i < str.length(); i++)
+        {
+            for (int j=0; j < str.length() ;j++)
+            {
+            if ((char) (str.charAt(i)) != (char) (str1.charAt(j)))
+            {
+             str1 += (char)(str.charAt(i));
+            }  
+            }
+        }
+        return str1;
+    }    
 }
+
