@@ -2,7 +2,7 @@
 public class UniqueChars {
     public static void main(String[] args) {  
         String str = args[0];
-        System.out.println(uniqueChars(str));
+        System.out.println(UniqueChars(str));
     }
 
     /**
@@ -10,19 +10,24 @@ public class UniqueChars {
      * except that all the duplicate characters are removed,
      * unless they are space characters.
      */
-    public static String uniqueChars(String str) {
-        String str1 = "";
-        for (int i =0;i < str.length(); i++)
+     public static String UniqueChars(String s) {
+        String str1 = "" ;
+        int length = s.length();
+
+        for (int i =0;i<length; i++)
         {
-            for (int j=0; j < str.length() ;j++)
-            {
-            if ((char) (str.charAt(i)) != (char) (str1.charAt(j)))
-            {
-             str1 += (char)(str.charAt(i));
-            }  
-            }
+            
+                if ( (s.charAt(i)) == 32 )
+                {
+                     str1 += (char)(s.charAt(i));
+                }  
+            
+                else if(str1.indexOf(s.charAt(i)) == -1)
+                {
+                str1 += (char)(s.charAt(i));
+                }
+             
         }
         return str1;
     }    
 }
-
